@@ -12,29 +12,48 @@ services:
         depends_on:
             - php
             - db
+        networks:
+            - app
     php:
         build: .docker
         restart: always
         volumes:
             - ./.docker/conf/php/php.ini:/usr/local/etc/php/conf.d/php.ini
+            - ./.docker/conf/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
             - .:/var/www/html
+        networks:
+            - app
+        ports:
+            - 6003:6003
 
     db:
         image: postgres:10.1
-        restart: always
+        restart: unless-stopped
         environment:
-            - POSTGRES_DB=${DB_NAME}
-            - POSTGRES_USER=${DB_USER}
-            - POSTGRES_PASSWORD=${DB_PASSWORD}
+            - POSTGRES_DB=workin
+            - POSTGRES_PASSWORD=
+            - APP_DB_USER=docker
+            - APP_DB_PASS=docker
+            - APP_DB_NAME=workin
         ports:
             - 5432:5432
         volumes:
             - ./.docker/conf/postgres/:/docker-entrypoint-initdb.d/
+        networks:
+            - app
+
 
     redis:
         image: redis
         ports:
             - 6379:6379
+        networks:
+            - app
+
+
+networks:
+    app:
+        driver: bridge
 
 
 
