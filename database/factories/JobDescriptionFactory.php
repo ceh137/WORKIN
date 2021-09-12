@@ -22,7 +22,8 @@ class JobDescriptionFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'brief'  => $this->faker->text(150),
+            'full' => $this->faker->text(1500),
         ];
     }
 }

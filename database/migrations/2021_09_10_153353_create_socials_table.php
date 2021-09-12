@@ -15,6 +15,13 @@ class CreateSocialsTable extends Migration
     {
         Schema::create('socials', function (Blueprint $table) {
             $table->id();
+            $table->string('vkontakte')->nullable();
+            $table->string('github')->nullable();
+            $table->string('google')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('linkedin')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('twitter')->nullable();
             $table->timestamps();
         });
     }

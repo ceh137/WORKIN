@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Company;
 use App\Models\CompanyRating;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -22,7 +23,9 @@ class CompanyRatingFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'company_id' => $this->faker->numberBetween(1, 100),
+            'rating' => $this->faker->numberBetween(1, 100),
         ];
     }
+
 }

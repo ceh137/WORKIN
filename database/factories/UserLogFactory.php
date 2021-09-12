@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Log;
+use App\Models\User;
 use App\Models\UserLog;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -22,7 +24,8 @@ class UserLogFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'user_id' => User::all()->random()->id,
+            'log_id' => Log::factory(),
         ];
     }
 }

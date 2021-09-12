@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Streams;
+use App\Models\Stream;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class StreamsFactory extends Factory
+class StreamFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Streams::class;
+    protected $model = Stream::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +22,7 @@ class StreamsFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->sentence(2),
         ];
     }
 }

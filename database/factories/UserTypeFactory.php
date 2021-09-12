@@ -21,8 +21,9 @@ class UserTypeFactory extends Factory
      */
     public function definition()
     {
+        $arr = collect(['admin', 'seeker', 'employer','user']);
         return [
-            //
+            'name' => $arr->random()
         ];
     }
 }

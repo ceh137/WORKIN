@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\CompanyDescription;
 use Illuminate\Database\Seeder;
 
 class CompanyDescriptionSeeder extends Seeder
@@ -13,6 +14,6 @@ class CompanyDescriptionSeeder extends Seeder
      */
     public function run()
     {
-        //
+
     }
 }

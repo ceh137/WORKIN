@@ -15,6 +15,14 @@ class CreateSeekerExperiencesTable extends Migration
     {
         Schema::create('seeker_experiences', function (Blueprint $table) {
             $table->id();
+            $table->integer('seeker_id');
+            $table->boolean('is_current_job');
+            $table->date('start_date');
+            $table->date('end_date');
+            $table->string('job_title');
+            $table->string('company_name');
+            $table->integer('job_location_id');
+            $table->text('description');
             $table->timestamps();
         });
     }

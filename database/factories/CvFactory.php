@@ -22,7 +22,8 @@ class CvFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'file_path' => $this->faker->filePath(),
+            'generated' => $this->faker->boolean(90),
         ];
     }
 }

@@ -15,7 +15,11 @@ class CreatePostLogsTable extends Migration
     {
         Schema::create('post_logs', function (Blueprint $table) {
             $table->id();
+            $table->integer('job_post_id');
+            $table->integer('logs_id');
             $table->timestamps();
+
+            $table->softDeletes();
         });
     }
 

@@ -21,8 +21,9 @@ class JobTypeFactory extends Factory
      */
     public function definition()
     {
+        $options = ['part_time', 'full_time', 'project'];
         return [
-            //
+            'name' => $options[$this->faker->numberBetween(0,2)],
         ];
     }
 }

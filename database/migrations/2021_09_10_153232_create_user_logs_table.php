@@ -15,7 +15,11 @@ class CreateUserLogsTable extends Migration
     {
         Schema::create('user_logs', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
+            $table->integer('log_id');
             $table->timestamps();
+
+            $table->softDeletes();
         });
     }
 

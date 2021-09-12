@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Seeker;
 use App\Models\SeekerRating;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -22,7 +23,8 @@ class SeekerRatingFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'seeker_id' => Seeker::all()->random()->id,
+            'rating' => $this->faker->numberBetween(0,100),
         ];
     }
 }

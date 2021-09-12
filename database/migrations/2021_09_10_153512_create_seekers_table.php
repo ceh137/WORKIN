@@ -15,7 +15,15 @@ class CreateSeekersTable extends Migration
     {
         Schema::create('seekers', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
+            $table->integer('cv_id');
+            $table->string('current_salary');
+            $table->string('wanted_salary');
+            $table->string('currency')->default('USD');
+
             $table->timestamps();
+
+            $table->softDeletes();
         });
     }
 

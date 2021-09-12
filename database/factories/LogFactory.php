@@ -22,7 +22,7 @@ class LogFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'text' => $this->faker->sentence(4),
         ];
     }
 }

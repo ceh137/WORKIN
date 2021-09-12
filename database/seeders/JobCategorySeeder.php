@@ -8,7 +8,7 @@ class JobCategorySeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
+     *wef
      * @return void
      */
     public function run()

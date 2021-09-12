@@ -2,17 +2,18 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
-class JobTypeSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *sdf
+     *
      * @return void
      */
     public function run()
     {
-        //
+
     }
 }

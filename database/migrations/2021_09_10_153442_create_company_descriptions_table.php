@@ -15,7 +15,11 @@ class CreateCompanyDescriptionsTable extends Migration
     {
         Schema::create('company_descriptions', function (Blueprint $table) {
             $table->id();
+            $table->string('brief');
+            $table->text('full');
             $table->timestamps();
+
+            $table->softDeletes();
         });
     }
 

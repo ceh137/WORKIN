@@ -15,6 +15,8 @@ class CreateJobDescriptionsTable extends Migration
     {
         Schema::create('job_descriptions', function (Blueprint $table) {
             $table->id();
+            $table->string('brief');
+            $table->text('full');
             $table->timestamps();
         });
     }

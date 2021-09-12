@@ -22,7 +22,8 @@ class CompanyDescriptionFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'brief' =>  $this->faker->text(150),
+            'full' => $this->faker->realText(500),
         ];
     }
 }

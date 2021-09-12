@@ -22,7 +22,7 @@ class JobExperienceFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'years_from' => $this->faker->numberBetween(0, 10),
         ];
     }
 }

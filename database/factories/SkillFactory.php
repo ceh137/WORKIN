@@ -22,7 +22,8 @@ class SkillFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name'=>$this->faker->word(),
+            'logo' => $this->faker->filePath()
         ];
     }
 }

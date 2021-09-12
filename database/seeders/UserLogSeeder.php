@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\UserLog;
 use Illuminate\Database\Seeder;
 
 class UserLogSeeder extends Seeder
@@ -13,6 +14,6 @@ class UserLogSeeder extends Seeder
      */
     public function run()
     {
-        //
+        UserLog::factory()->count(3000)->create();
     }
 }

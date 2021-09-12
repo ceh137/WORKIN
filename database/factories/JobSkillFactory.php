@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\JobPost;
 use App\Models\JobSkill;
+use App\Models\Skill;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class JobSkillFactory extends Factory
@@ -22,7 +24,9 @@ class JobSkillFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'post_id' => JobPost::all()->random()->id,
+            'skill_id' => Skill::factory(),
+            'level' => $this->faker->numberBetween(1,100),
         ];
     }
 }

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\SeekerSkill;
 use Illuminate\Database\Seeder;
 
 class SeekerSkillSeeder extends Seeder
@@ -13,6 +14,6 @@ class SeekerSkillSeeder extends Seeder
      */
     public function run()
     {
-        //
+        SeekerSkill::factory()->count(3000)->create();
     }
 }

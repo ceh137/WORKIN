@@ -8,7 +8,7 @@ class LocationSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
+     *svs
      * @return void
      */
     public function run()

@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\JobPost;
+use App\Models\Log;
 use App\Models\PostLog;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -22,7 +24,8 @@ class PostLogFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'job_post_id' => JobPost::all()->random()->id,
+            'logs_id' => Log::factory()
         ];
     }
 }

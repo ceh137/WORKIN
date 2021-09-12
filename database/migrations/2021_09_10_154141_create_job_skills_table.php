@@ -15,6 +15,9 @@ class CreateJobSkillsTable extends Migration
     {
         Schema::create('job_skills', function (Blueprint $table) {
             $table->id();
+            $table->integer('post_id');
+            $table->integer('skill_id');
+            $table->integer('level');
             $table->timestamps();
         });
     }

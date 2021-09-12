@@ -15,6 +15,8 @@ class CreateSeekerRatingsTable extends Migration
     {
         Schema::create('seeker_ratings', function (Blueprint $table) {
             $table->id();
+            $table->integer('seeker_id');
+            $table->integer('rating');
             $table->timestamps();
         });
     }

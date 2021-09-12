@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Seeker;
 use Illuminate\Database\Seeder;
 
 class SeekerSeeder extends Seeder
@@ -13,6 +14,6 @@ class SeekerSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Seeker::factory()->count(1000)->create();
     }
 }

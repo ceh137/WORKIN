@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\JobPost;
 use Illuminate\Database\Seeder;
 
 class JobPostSeeder extends Seeder
@@ -13,6 +14,6 @@ class JobPostSeeder extends Seeder
      */
     public function run()
     {
-        //
+        JobPost::factory()->count(1000)->create();
     }
 }

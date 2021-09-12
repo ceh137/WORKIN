@@ -16,7 +16,7 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->date('date_of_birth')->nullable();
-            $table->integer('gender_id')->nullable();
+            $table->integer('gender')->nullable();
             $table->boolean('is_active')->nullable();
             $table->string('contact_number')->nullable();
             $table->boolean('email_notification_is_active')->default(true);
@@ -30,6 +30,8 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+
+            $table->softDeletes();
         });
     }
 

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\SeekerExperience;
 use Illuminate\Database\Seeder;
 
 class SeekerExperienceSeeder extends Seeder
@@ -13,6 +14,6 @@ class SeekerExperienceSeeder extends Seeder
      */
     public function run()
     {
-        //
+        SeekerExperience::factory()->count(2000)->create();
     }
 }

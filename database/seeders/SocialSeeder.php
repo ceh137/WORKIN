@@ -8,7 +8,7 @@ class SocialSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
+     *svd
      * @return void
      */
     public function run()

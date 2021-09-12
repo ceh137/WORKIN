@@ -22,7 +22,10 @@ class LocationFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'country' => $this->faker->country(),
+            'state' => '',
+            'city' => $this->faker->city(),
+            'address' => $this->faker->streetAddress(),
         ];
     }
 }

@@ -22,7 +22,11 @@ class SocialFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'vkontakte' => $this->faker->url(),
+            'instagram' => $this->faker->url(),
+            'github' => $this->faker->url(),
+            'twitter' => $this->faker->url(),
+            'google' => $this->faker->url(),
         ];
     }
 }
